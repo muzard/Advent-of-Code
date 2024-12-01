@@ -30,9 +30,20 @@ leftSide.sort()
 rightSide.sort()
 
 sum = 0
+task2sum = 0
+
+def numTimesCount(num):
+    return num * rightSide.count(num)
 
 for i in range(len(leftSide)):
     sum += abs(leftSide[i] - rightSide[i])
+    task2sum += numTimesCount(leftSide[i])
+
+
+
 
 print("total sum was:")
 print(sum)
+
+print("task 2 result ==")
+print(task2sum)
